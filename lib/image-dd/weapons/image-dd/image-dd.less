@@ -1,0 +1,81 @@
+/**
+  * yumen t=20120515
+  */
+/*
+ * import mixin
+ */
+
+@import '../../page/tools.less';
+@import '../../page/variables.less';
+
+.close-rt{
+    background-image: ~"url(@{btns-sprite2})";
+    background-repeat: no-repeat;
+}
+.img-dd-popup{
+    position: absolute;
+    left:0;
+    top:0;
+    z-index: 10000;
+    width: 100%;
+    height: 100%;
+    overflow:hidden;
+    .img-dd-opacity-bg{
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 10001;
+        background-color: black;
+        .opacity(0.5);
+    }
+    .img-dd-box{
+        position: absolute;
+        z-index: 10002;
+        .box-hd{
+            
+        }
+        .box-bt{
+            
+        }
+        .box-bd{
+            text-align:center;
+            img{
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 0;
+                cursor: move;
+            }
+        }
+    }
+}
+.close-rt-wrap{    
+    position: fixed;
+    right: 0;
+    top: -1px;
+    z-index: 100000;
+    _display: none;
+    .close-rt{
+        position: fixed;
+        display: block;
+        right: 0;
+        top: -1px;
+        width: 44px;
+        height: 42px;
+        background-position: -161px -630px;
+        cursor: pointer;
+    }
+}
+.ie-popup-mask{
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+    z-index: 1;
+    background: none;
+    .opacity(0);
+}

@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Frontend Design Test_alibaba</title>
+
+<link rel="stylesheet" href="../../basecss/reset.css" />
+<script src="http://a.tbcdn.cn/??s/kissy/1.3.0rc/kissy.js"></script>
+
+</head>
+<body style="position: relative;">
+
+<!-- include assets -->
+<script>
+KISSY.config({
+  packages:[
+    {
+      name: 'weapons'
+      ,tag: '20120912'
+      ,path: './'
+      ,charset: 'gbk'
+      ,debug: true
+    },{
+      name: 'basejs'
+      ,tag: '20121012'
+      ,path: '../../'
+      ,charset: 'gbk'
+      ,debug: true
+    }
+  ]
+});
+</script>
+
+<img src="http://img01.taobaocdn.com/imgextra/i1/10361016579368429/T1zbCTXfdmXXXXXXXX_!!413810361-0-tstar.jpg_290x10000.jpg" data-original-url="http://img01.taobaocdn.com/imgextra/i1/10361016579368429/T1zbCTXfdmXXXXXXXX_!!413810361-0-tstar.jpg" />
+<br/>
+<img src="http://img04.taobaocdn.com/imgextra/i4/10361016579292275/T1RIGTXXBkXXXXXXXX_!!413810361-0-tstar.jpg_290x10000.jpg" data-original-url="http://img01.taobaocdn.com/imgextra/i4/10361016579292275/T1RIGTXXBkXXXXXXXX_!!413810361-0-tstar.jpg" />
+<br/>
+<img src="http://img03.taobaocdn.com/imgextra/i3/10361018904480015/T1EGqnXap7XXXXXXXX_!!413810361-0-tstar.jpg_290x10000.jpg" data-original-url="http://img02.taobaocdn.com/imgextra/i3/10361018904480015/T1EGqnXap7XXXXXXXX_!!413810361-0-tstar.jpg" />
+
+<script>
+KISSY.use('weapons/image-dd/2.0/image-dd', function(S,IMGDD){
+  var $ = S.all;
+  IMGDD.add(document, '');
+});
+</script>
+</body>
+</html>
