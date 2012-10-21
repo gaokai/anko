@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Frontend Design Test_alibaba</title>
+
+<link rel="stylesheet" href="../../basecss/reset.css" />
+
+</head>
+<body style="position: relative;">
+<h1 style="text-align: center;">You Belong With Us!(天生一队2.0)</h1>
+<table id="J_You" class="you"></table>
+<!-- include assets -->
+<style>
+.you{
+  width: 500px;
+  margin: 20px auto 0;
+  border-collapse: collapse;
+  color: #666;
+}
+.you tr{
+}
+.you .tr0{
+
+}
+.you .tr1{
+
+}
+.you .tr2{
+
+}
+.you .tr3{
+
+}
+.you td{
+  border: 1px solid #ccc;
+  padding: 3px 5px;
+}
+</style>
+<script>
+var menu = ['黑三', '常胤', '承玉', '飞长', '凤寻', '高瞻', '季札', '十渡', '石霸', '水儿', '丹丹', '东武', '筱谷', '棪木', '玉门', '鱼相', '云休', '子竹', '姜峰'];
+// var menu = ['1黑三', '2常胤', '3承玉', '4飞长', '5凤寻', '6高瞻', '7季札', '8十渡', '9石霸', '9水儿', '10丹丹', '11东武', '12筱谷', '13棪木', '14玉门', '15鱼相', '16云休', '17子竹', '18姜峰'];
+var LEN = menu.length, t;
+var box = document.getElementById('J_You');
+var _html = '';
+
+//洗牌 + dom渲染
+for(var i = 0; i < LEN; ++i){
+  //洗牌
+  var random = parseInt(Math.random()*(LEN-i), 10);
+  t = menu[LEN-i-1];
+  menu[LEN-i-1] = menu[random];
+  menu[random] = t;
+
+  //dom渲染
+  if(i%5==0){
+    _html += '<tr class="tr' + parseInt(i/5) +'"><td style="font-weight: bolder;color: blue;">'+ parseInt(i/5+1) +'队</td>';
+  }
+  _html += '<td>' + menu[LEN-i-1] + '</td>';
+}
+
+_html += '<td style="color: pink;">等待新同学</td>';
+
+box.innerHTML = _html;
+
+</script>
+</body>
+</html>
